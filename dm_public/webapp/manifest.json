@@ -49,9 +49,8 @@
         "documentTable": {
           "name": "com.sap.ecm.reuse.documentTable",
           "settings": {
-            "destinationPath": "/public",  
-            "objectId": "70LC7CBLYn_fWfFhV3nLMlnLPasu_DSNVYI3bnTnwDA",
-            "publicLinkId":"ef1e1c44-4bdd-4db6-963d-3b09830fb6d1"
+            "destinationPath": "/public",
+            "publicLinkId":"f8eda9ed-6646-4692-8142-c4b40d64e9d5"
             }
           }
         },

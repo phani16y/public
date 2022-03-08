@@ -10,7 +10,7 @@
             <pages>
                 <Page id="page" title="{i18n>title}">
                     <content >
-                    <core:ComponentContainer id = "cc" usage="documentTable" height="100%" async="false" manifest="true"/>
+                    <core:ComponentContainer id = "cc" usage="documentTable" height="100%" async="false" manifest="true" componentCreated=".onComponentCreated"/>
                     </content >
                 </Page>
             </pages>
