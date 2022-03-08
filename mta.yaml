@@ -16,10 +16,14 @@ modules:
       url: https://ui5.sap.com
     parameters:
      disk-quota: 256M
-     memory: 256M
-  - name: dm_dev
+     memory: 256M    
+  - name: sdm-di
+  - name: sdibackend
+    group: destinations
     properties:
-      destinations: "[{\"name\": \"sdibackend\", \"url\": \"https://api-sdm-di.cfapps.sap.hana.ondemand.com\", \"forwardAuthToken\": true}]"   
+      forwardAuthToken: true
+      name: sdibackend
+      url: '~{url}'
 - name: public_ui_deployer
   type: com.sap.application.content
   path: .
@@ -57,11 +61,14 @@ resources:
     service: xsuaa
     service-name: public-xsuaa-service
     service-plan: application
-- name: dm_dev
+- name: sdm-di
   type: org.cloudfoundry.managed-service
   parameters:
-    service: sdm
+    service: sdm-dev
     service-plan: standard    
+- name: sdibackend
+  properties:
+      url: 'https://api-sdm-di-dev.cfapps.sap.hana.ondemand.com'    
 - name: public_html_repo_host
   type: org.cloudfoundry.managed-service
   parameters:
